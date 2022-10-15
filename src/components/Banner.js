@@ -58,7 +58,7 @@ export const Banner = () => {
                 <span className="tagline">Hi.</span>
                 <h1>{`I'm Jason, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I'm Jason Lam, a 21 year-old computer science student currently in my final year at University Central Florida.</p>
-                  <button onClick={() => console.log('connect')}>Learn more<ArrowRightCircle size={25} /></button>
+                  <a href='https://drive.google.com/file/d/1vQesr3xMq5MO6JGnRU87r-bt2XYKKZGQ/view?usp=sharing' target="_blank" rel="noopener noreferrer">Here's my resume<ArrowRightCircle size={25} /></a>
               </div>}
             </TrackVisibility>
           </Col>
