@@ -1,12 +1,14 @@
 
-import webIcon from "../assets/img/icons8-web-100.png";
-import protoIcon from "../assets/img/icons8-prototyping-100.png";
+import CIcon from "../assets/img/icons8-c-programming-100.png";
+import protoIcon from "../assets/img/icons8-figma-48.png";
 import reactIcon from "../assets/img/icons8-react-100.png";
+import javaIcon from "../assets/img/icons8-java-100.png";
+import gitIcon from "../assets/img/Git-Icon-1788C.png";
+import JSIcon from "../assets/img/icons8-javascript-100.png";
+import angularIcon from "../assets/img/icons8-angularjs-100.png";
+import pythonIcon from "../assets/img/icons8-python-100.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
   const responsive = {
@@ -35,24 +37,40 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                      <h2>Skills</h2>
-                      <p>Here are some of the technologies that I have worked with.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                      <h2>Tools</h2>
+                      <p>Here are some tools that I've grown comfortable working with.</p>
                       <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                          <div className="item">
-                              <img src={webIcon} alt="" />
-                              <h5>Web Development</h5>
-                          </div>
-                          <div className="item">
-                              <img src={protoIcon} alt="" />
-                              <h5>Prototyping</h5>
-                          </div>
-                          <div className="item">
-                              <img src={webIcon} alt="" />
-                              <h5>User Experience</h5>
-                          </div>
                           <div className="item">
                               <img src={reactIcon} alt="" />
                               <h5>React</h5>
+                          </div>
+                          <div className="item">
+                              <img src={protoIcon} alt="" />
+                              <h5>Figma</h5>
+                          </div>
+                          <div className="item">
+                              <img src={javaIcon} alt="" />
+                              <h5>Java</h5>
+                          </div>
+                          <div className="item">
+                              <img src={CIcon} alt="" />
+                              <h5>C</h5>
+                          </div>
+                          <div className="item">
+                            <img src={gitIcon} alt=""/>
+                            <h5>Git</h5>
+                          </div>
+                          <div className="item">
+                            <img src={JSIcon} alt=""/>
+                            <h5>JavaScript</h5>
+                          </div>
+                          <div className="item">
+                            <img src={angularIcon} alt=""/>
+                            <h5>Angular</h5>
+                          </div>
+                          <div className="item">
+                            <img src={pythonIcon} alt=""/>
+                            <h5>Python</h5>
                           </div>
                       </Carousel>
                     </div>

@@ -1,6 +1,8 @@
 {
   "name": "personal-portfolio",
+  "homepage": "https://jasonmlam.com/",
   "version": "0.1.0",
+  "description": "my website portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
