@@ -15,7 +15,7 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) => <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
               <h2>Let's Talk</h2>
-              <p>I am always open for new opportunities, whether it be freelance work, constructive criticism, or even a casual conversation :) </p>
+              <p>I am always open for new opportunities, whether it be freelance work, constructive criticism, or even a casual conversation!</p>
               <span className="contact-text">              
                 <a href="mailto:jasolamo@gmail.com"><button>Send a message</button></a>                
               </span>
