@@ -11,8 +11,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
-  const period = 2000;
+  const toRotate = [ "", "", "" ];
+  const period = 2000;  
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -55,17 +55,17 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Hi.</span>
-                <h1>{`I'm Jason, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm Jason Lam, a 21 year-old computer science student currently in my final year at University Central Florida.</p>
-                  <a href='https://drive.google.com/file/d/1vQesr3xMq5MO6JGnRU87r-bt2XYKKZGQ/view?usp=sharing' target="_blank" rel="noopener noreferrer">Here's my resume<ArrowRightCircle size={25} /></a>
+                {/* <span className="tagline">Hello</span> */}
+                <h1>{`Hello`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "\", "", "" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I'm Jason Lam, a 21 year-old computer science student currently in my final year at University Central Florida. I specialize in front-end web development, creating attractive interfaces that enhance a user's experience.</p>
+                  <a href='https://drive.google.com/file/d/1vQesr3xMq5MO6JGnRU87r-bt2XYKKZGQ/view?usp=sharing' target="_blank" rel="noopener noreferrer">My resume<ArrowRightCircle size={25} /></a>
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <div>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>

@@ -92,7 +92,8 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+  /* background-image: radial-gradient( circle farthest-corner at 20% 10%, rgba(32,45,58,1) 0%, rgba(90,92,106,1) 81.3% ); */
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -118,21 +119,21 @@ span.navbar-text {
     margin-left: 14px;
 }
 .social-icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: inline-flex;
-    border-radius: 50%;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .social-icon a::before {
     content: "";
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     background-color: #ffffff;
     border-radius: 50%;
@@ -152,8 +153,8 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -234,7 +235,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply; */
+  /* background-image: url('./assets/img/banner-bg.png'); */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,8 +247,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  /* background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
+  /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% ); */
+  /* border: 0.5px solid rgba(255, 255, 255, 0.5); */
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -286,34 +291,58 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-decoration: none
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  width: 400px;
+  -webkit-animation: mover 10s infinite  alternate;
+  animation: mover 10s ease-in infinite alternate;
 }
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+@-webkit-keyframes mover {
+  0% { transform: translateX(15px); }
+  50% { transform: translateY(10px); }
+  75% { transform: translateX(15px); }
+  100% { transform: translateY(-10px); }
+  /* 0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); } */
+}
+@keyframes mover {
+  0% { transform: translateX(15px); }
+  50% { transform: translateY(10px); }
+  75% { transform: translateX(15px); }
+  100% { transform: translateY(-10px); }
+  /* 0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); } */
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+  animation: blink 1s infinite;
+}
+@keyframes blink {    
+  from, to {    
+    border-right: transparent;    
+  }    
+  50% {    
+    border-right: 0.08em solid #666;
+  }    
+} 
+.animate__animated.animate__zoomIn {
+  --animate-duration: 5s;
+}
+.animate__animated.animate__pulse {
+  --animate-duration: 2s;
 }
 
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 .skill-bx {
-  background: #151515;
+  /* background: #151515; */
+  background-image: radial-gradient( circle farthest-corner at 20% 10%, rgba(32,45,58,1) 0%, rgba(90,92,106,1) 81.3% );
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  margin-top: 60px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -348,6 +377,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 80px 0;
   position: relative;
   background-color: black;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
 }
 .project h2 {
 	font-size: 45px;
@@ -367,7 +397,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  /* background-color: rgb(255 255 255 / 10%); */
+  /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% ); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
@@ -392,7 +424,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
     top: 0;
     left: 0;
     z-index: -1;
@@ -428,7 +461,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -475,7 +509,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #2b482d -5.91%, #472e5b 111.58%); */
+  background-image: radial-gradient( circle farthest-corner at 20% 10%, rgba(32,45,58,1) 0%, rgba(90,92,106,1) 81.3% );
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -544,11 +579,65 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
+.contact a svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  text-decoration: none;
+}
+.contact a:hover svg {
+  margin-left: 25px;
+  text-decoration: none
+}
+/* styling for button */
 
+.contact-text button {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 18px 34px;
+  font-size: 18px;
+  /* margin-left: 18px; */
+  margin-top: 48px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+.contact-text button span {
+  z-index: 1;
+}
+.contact-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.contact-text button:hover {
+  color: #121212;
+}
+.contact-text button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.contact p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -577,7 +666,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -606,7 +696,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
